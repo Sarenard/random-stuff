@@ -33,7 +33,7 @@ class listener(StreamListener):
         if not contains_word(tweet, 'RT') and not contains_word(tweet, 'exemple'):
             nb += 1
             api.update_status(
-                status='@' + username + ' ' + tweet.replace("place", "deez nuts").replace("team", "deez nuts").replace("us", "deez nuts").replace("you", "deez nuts").replace("the community", "deez nuts"),
+                status='@' + username + ' ' + tweet.replace("taken place", "taken deez nuts").replace("team", "deez nuts").replace("us", "deez nuts").replace("you", "deez nuts").replace("the community", "deez nuts"),
                 in_reply_to_status_id=id_tweet
             )
         return True
@@ -41,4 +41,4 @@ class listener(StreamListener):
         print(status)
 api, auth = auth()
 twitterStream = Stream(auth, listener())
-twitterStream.filter(track=["place", "team", "teams", "us", "you", "the community"])
+twitterStream.filter(track=["taken place", "team", "teams", "us", "you", "the community"])

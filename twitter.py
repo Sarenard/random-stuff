@@ -32,8 +32,6 @@ class listener(StreamListener):
         username = all_data['user']['screen_name']
         if not contains_word(tweet, 'RT') and not contains_word(tweet, 'exemple'):
             nb += 1
-            print(datetime.utcnow().strftime('%d/%m/%Y %H:%M:%S.%f') + " Un tweet a été fait, tweet numéro : " + str(nb))
-            time.sleep(60)
             api.update_status(
                 status='@' + username + ' ' + tweet.replace("place", "deez nuts").replace("team", "deez nuts").replace("us", "deez nuts").replace("you", "deez nuts").replace("the community", "deez nuts"),
                 in_reply_to_status_id=id_tweet

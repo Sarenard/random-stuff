@@ -63,8 +63,9 @@ class morpion:
             print(get_trad(language, "It's a draw !"))
             import sys
             sys.exit()
-game = morpion()
+            
 language = input("please enter your language in this list : "+str(list(traductions.keys()))+" : ")
+game = morpion()
 while True:
     game.setcase(int(input(get_trad(language, "Please enter the number of the case : ")))-1, game.tour)
     game.print_board()

@@ -57,8 +57,6 @@ class morpion:
             print(get_trad(language, "It's a draw !"))
             import sys
             sys.exit()
-        else:
-            pass
 game = morpion()
 language = input("please enter your language in this list : "+str(list(traductions.keys()))+" : ")
 while True:

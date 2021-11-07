@@ -1,1 +1,1 @@
-fibbonacci = lambda nb : 1 if nb == 0 or nb == 1 else fibbonacci(nb-1)+fibbonacci(nb-2)
+fibbonacci = lambda nb: 1 if nb in [0, 1] else fibbonacci(nb-1) + fibbonacci(nb-2)

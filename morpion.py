@@ -6,6 +6,12 @@ traductions = {
         "It's a draw !" : "Match nul !",
         "Please enter the number of the case : " : "Entrez le numéro de la case : ",
     },
+    "esp" : {
+        "case already filled" : "¡caso ya lleno!",
+        "player {player} just won !" : "¡El jugador {player} acaba de ganar!",
+        "It's a draw !" : "¡Es un empate!",
+        "Please enter the number of the case : " : "Por favor ingrese el número del caso : ",
+    },
 }
 
 def get_trad(language, key):

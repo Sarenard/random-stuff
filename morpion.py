@@ -16,7 +16,7 @@ def get_trad(language, key):
 
 class morpion:
     def __init__(self):
-        # 0 = vide, 1 = croix, 2 = rond
+        # 0 = empty, 1 = X (player 1), 2 = O (player 2)
         self.cases = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
         self.tour = 1
     def setcase(self, nb, joueur):
@@ -30,13 +30,13 @@ class morpion:
     def getcase(self, nb):
         return self.cases[int(nb/3)][nb%3]
     def getwin(self):
-        # check joueur 1
+        # check player 1
         if self.cases[0][2] == self.cases[1][1] == self.cases[2][0] == 1 or self.cases[0][0] == self.cases[1][1] == self.cases[2][2] == 1 or self.cases[0][2] == self.cases[1][2] == self.cases[2][2] == 1 or self.cases[0][1] == self.cases[1][1] == self.cases[2][1] == 1 or self.cases[0][0] == self.cases[1][0] == self.cases[2][0] == 1 or self.cases[2][0] == self.cases[2][1] == self.cases[2][2] == 1 or self.cases[0][0] == self.cases[0][1] == self.cases[0][2] == 1 or self.cases[1][0] == self.cases[1][1] == self.cases[1][2] == 1:
             return 1
-        # check joueur 2
+        # check player 2
         if self.cases[0][2] == self.cases[1][1] == self.cases[2][0] == 2 or self.cases[0][0] == self.cases[1][1] == self.cases[2][2] == 2 or self.cases[0][2] == self.cases[1][2] == self.cases[2][2] == 2 or self.cases[0][1] == self.cases[1][1] == self.cases[2][1] == 2 or self.cases[0][0] == self.cases[1][0] == self.cases[2][0] == 2 or self.cases[2][0] == self.cases[2][1] == self.cases[2][2] == 2 or self.cases[0][0] == self.cases[0][1] == self.cases[0][2] == 2 or self.cases[1][0] == self.cases[1][1] == self.cases[1][2] == 2:
             return 2
-        # check match nul
+        # check draw
         if self.cases[0][0] != 0 and self.cases[0][1] != 0 and self.cases[0][2] != 0 and self.cases[1][0] != 0 and self.cases[1][1] != 0 and self.cases[1][2] != 0 and self.cases[2][0] != 0 and self.cases[2][1] != 0 and self.cases[2][2] != 0:
             return 3
     def get(self, id):
